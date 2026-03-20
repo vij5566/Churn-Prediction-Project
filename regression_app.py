@@ -14,15 +14,15 @@ st.set_page_config(
 # ------------------ LOAD MODEL ------------------ #
 @st.cache_resource
 def load_all():
-    model = tf.keras.models.load_model('model.keras')
+    model = tf.keras.models.load_model('models/model.keras')
 
-    with open('geo_encoder.pkl', 'rb') as f:
+    with open('utils/geo_encoder.pkl', 'rb') as f:
         one_hot_en = pickle.load(f)
 
-    with open('scaler_reg.pkl', 'rb') as f:
+    with open('utils/scaler_reg.pkl', 'rb') as f:
         scaler = pickle.load(f)
 
-    with open('label_encoder.pkl','rb') as f:
+    with open('utils/label_encoder.pkl','rb') as f:
         label_en_gender = pickle.load(f)
 
     return model, one_hot_en, scaler, label_en_gender
