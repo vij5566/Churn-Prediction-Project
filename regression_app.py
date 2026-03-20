@@ -14,7 +14,7 @@ st.set_page_config(
 # ------------------ LOAD MODEL ------------------ #
 @st.cache_resource
 def load_all():
-    model = tf.keras.models.load_model('models/model.keras')
+    model = tf.keras.models.load_model('models/model_reg.h5')
 
     with open('utils/geo_encoder.pkl', 'rb') as f:
         one_hot_en = pickle.load(f)
