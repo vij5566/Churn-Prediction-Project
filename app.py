@@ -8,8 +8,8 @@ import pickle
 st.set_page_config(page_title="Churn Prediction", layout="wide")
 
 # Load model safely
-#model = tf.keras.models.load_model('model.h5', compile=False)
-model = tf.keras.models.load_model('models/model.keras')
+model = tf.keras.models.load_model('models/model.h5', compile=False)
+#model = tf.keras.models.load_model('models/model.keras')
 
 with open('utils/geo_encoder.pkl', 'rb') as f:
     one_hot_en = pickle.load(f)
