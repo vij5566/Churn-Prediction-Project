@@ -1,9 +1,9 @@
 tensorboard
 matplotlib
 streamlit==1.33.0
-tensorflow-cpu==2.15.0
-keras==3.0.5
+tensorflow-cpu==2.12.0
 pandas
 numpy
 scikit-learn
+h5py==3.8.0
 protobuf==3.20.3
